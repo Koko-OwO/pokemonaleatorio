@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon generate</title>
+
+    <style>
+        .pokemonComponent {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .square {
+            width: 170px;
+            height: 170px;
+            margin-right: 10px;
+        }
+
+        .acero {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+            margin-top: 5px;
+            margin-bottom: 5px;
+    
+
+        }
+
+        .agua {
+            background-color: grey;
+            background-image: url("https://github.com/Koko-OwO/buscardorrestaurantes/blob/main/assets/img/collage.png?raw=true");
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .bicho {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+        .eléctrico {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .dragón {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .fantasma {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .fuego {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+        .hada {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .hielo {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+        .lucha {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .normal {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .planta {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .psíquico {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .roca {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .siniestro {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .tierra {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .volador {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+
+        .veneno {
+            background-color: grey;
+            background-image: url(acero.jpg);
+            width: 170px;
+            height: 170px;
+            background-size: cover;
+
+        }
+        /* Agrega estilos para otros tipos de Pokémon si es necesario */
+
+
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .ma aside {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .boton aside {
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Genera tu Pokémon</h1>
+        </nav>
+        <section class="ma">
+            <aside>
+                <h3>Tipo</h3>
+                <div id="resultados" class="resultado">
+                    <!-- El resultado se mostrará aquí -->
+                </div>
+            </aside>
+            <aside>
+                <h3>Especie</h3>
+                <div id="resultados2" class="resultado">
+                    <!-- El resultado se mostrará aquí -->
+                </div>
+            </aside>
+            <aside>
+                <h3>Caracteristicas</h3>
+            </aside>
+           
+        </section>
+     <section class="boton">
+        <aside >
+            <a href="#" id="boton">
+                <button type="button" onclick="mostrarPokemonAlAzar()">
+                    generate
+                </button>
+            </a>
+
+            <a href="#" id="boton">
+                <button type="button" onclick="mostrarPokemonAlEspecie()">
+                    generate
+                </button>
+            </a>
+        </aside>
+     </section>
+    </header>
+
+    <script>
+        function seleccionarPokemonAlAzar(datos) {
+            return datos[Math.floor(Math.random() * datos.length)];
+        }
+
+        function mostrarPokemonAlAzar() {
+            let tipoResultado = seleccionarPokemonAlAzar(tipo);
+            mostrarComponentePokemon(tipoResultado); // Mostrar componente para el tipo seleccionado
+        }
+
+        function mostrarComponentePokemon(tipo) {
+            const resultadosDiv = document.getElementById("resultados");
+            resultadosDiv.innerHTML = ''; // Limpiar contenido anterior
+
+            const pokemonComponent = document.createElement('div');
+            pokemonComponent.classList.add('pokemonComponent');
+
+            const square = document.createElement('div');
+            square.classList.add('square');
+            square.classList.add(tipo.toLowerCase());
+            pokemonComponent.appendChild(square);
+
+            const name = document.createElement('div');
+            name.textContent = tipo;
+            pokemonComponent.appendChild(name);
+
+            resultadosDiv.appendChild(pokemonComponent); // Agregar el componente al resultado
+        }
+
+        let tipo = ['Acero', 'Agua', 'Bicho', 'Eléctrico', 'Dragón', 'Fantasma', 'Fuego', 'Hada', 'Hielo', 'Lucha', 'Normal', 'Planta', 'Psíquico', 'Roca', 'Siniestro', 'Tierra', 'Volador', 'Veneno'];
+    </script>
+
+</body>
+</html>

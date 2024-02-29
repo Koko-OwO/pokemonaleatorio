@@ -1,0 +1,56 @@
+mamiferos
+aves
+reptiles
+anfibios
+peces
+moluscos
+equinodermos (estrellas de mar, erizos de mar)
+arácnidos
+insectos
+gusanos
+crustáceos
+myriapoda (cien pies y mil pies)
+
+
+
+/*Características*/
+
+
+Humanoide
+Manos flotantes
+Alto
+Bajo
+Manos enormes
+Piernas cortas
+Sin pies
+Piernas largas
+Con cadenas
+Ojo enormes
+Muchos ojos
+Sin ojos
+Mucho pelo
+Sin pelo
+Ojos pequeños
+Viscoso
+Espinoso
+Colmillos
+Robotico
+Bipedo
+Cuadrupedo
+Alas
+Tentaculos
+Luminoso
+Armado
+Material solido
+Liquido
+Ligero
+Pesado
+Ecamas
+
+
+
+
+
+
+
+
